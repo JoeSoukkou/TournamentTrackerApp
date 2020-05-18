@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TrackerApp
-{
+namespace TrackerLibrary.Models {
     public class MatchupEntryModel
     {
         public TeamModel TeamCompeting { get; set; }

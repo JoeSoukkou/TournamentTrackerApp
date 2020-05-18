@@ -98,6 +98,7 @@
             this.PrizeAmountValue.Name = "PrizeAmountValue";
             this.PrizeAmountValue.Size = new System.Drawing.Size(260, 28);
             this.PrizeAmountValue.TabIndex = 18;
+            this.PrizeAmountValue.Text = "0";
             // 
             // PrizeAmountLabel
             // 
@@ -117,6 +118,7 @@
             this.PrizePercentageValue.Name = "PrizePercentageValue";
             this.PrizePercentageValue.Size = new System.Drawing.Size(260, 28);
             this.PrizePercentageValue.TabIndex = 20;
+            this.PrizePercentageValue.Text = "0";
             // 
             // PrizePercentageLabel
             // 
@@ -154,6 +156,7 @@
             this.CreatePrizeButton.TabIndex = 24;
             this.CreatePrizeButton.Text = "Create Prize";
             this.CreatePrizeButton.UseVisualStyleBackColor = true;
+            this.CreatePrizeButton.Click += new System.EventHandler(this.CreatePrizeButton_Click);
             // 
             // CreatePrizeForm
             // 
