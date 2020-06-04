@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateTeamForm));
-            this.TournamentNameValue = new System.Windows.Forms.TextBox();
+            this.TeamNameValue = new System.Windows.Forms.TextBox();
             this.TeamNameLabel = new System.Windows.Forms.Label();
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.AddMemberButton = new System.Windows.Forms.Button();
@@ -51,13 +51,13 @@
             this.AddNewMember.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TournamentNameValue
+            // TeamNameValue
             // 
-            this.TournamentNameValue.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TournamentNameValue.Location = new System.Drawing.Point(28, 90);
-            this.TournamentNameValue.Name = "TournamentNameValue";
-            this.TournamentNameValue.Size = new System.Drawing.Size(376, 28);
-            this.TournamentNameValue.TabIndex = 13;
+            this.TeamNameValue.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamNameValue.Location = new System.Drawing.Point(28, 90);
+            this.TeamNameValue.Name = "TeamNameValue";
+            this.TeamNameValue.Size = new System.Drawing.Size(376, 28);
+            this.TeamNameValue.TabIndex = 13;
             // 
             // TeamNameLabel
             // 
@@ -269,6 +269,7 @@
             this.CreateNewTeamButton.TabIndex = 23;
             this.CreateNewTeamButton.Text = "Create Team";
             this.CreateNewTeamButton.UseVisualStyleBackColor = true;
+            this.CreateNewTeamButton.Click += new System.EventHandler(this.CreateNewTeamButton_Click);
             // 
             // CreateTeamForm
             // 
@@ -283,7 +284,7 @@
             this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.SelectTeamMemberDropdown);
             this.Controls.Add(this.SelectTeamMemberLabel);
-            this.Controls.Add(this.TournamentNameValue);
+            this.Controls.Add(this.TeamNameValue);
             this.Controls.Add(this.TeamNameLabel);
             this.Controls.Add(this.HeaderLabel);
             this.Font = new System.Drawing.Font("Source Sans Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -299,7 +300,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TournamentNameValue;
+        private System.Windows.Forms.TextBox TeamNameValue;
         private System.Windows.Forms.Label TeamNameLabel;
         private System.Windows.Forms.Label HeaderLabel;
         private System.Windows.Forms.Button AddMemberButton;

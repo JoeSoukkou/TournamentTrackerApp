@@ -64,7 +64,7 @@ namespace TrackerUI
             }
             else
             {
-                MessageBox.Show("Please Fill in All The Details !");
+                MessageBox.Show("Please Fill in All The Necessary Details !");
             }
 
         }
@@ -114,6 +114,32 @@ namespace TrackerUI
                 AvailableTeamMembers.Add(person);
                 WireUpLists();
             }
+        }
+
+        private void CreateNewTeamButton_Click(object sender, EventArgs e)
+        {
+            if (VerifyTeamBeforeAdding())
+            {
+                TeamModel Team = new TeamModel();
+                Team.TeamName = TeamNameValue.Text;
+                Team.TeamMembers = SelectedTeamMembers;
+                GlobalConfig.Connection.CreateTeam(Team);
+                // TODO - Resetting the form after creation || Closing the Form after creation (when called it from the main form) 
+            }
+            else 
+            {
+                MessageBox.Show("Please Fill In All The Necessary Details ! ");
+            }
+            
+        }
+        private bool VerifyTeamBeforeAdding()
+        {
+            bool output = true;
+            if (TeamNameValue.Text.Length == 0 || SelectedTeamMembers.Count == 0)
+            {
+                output = false;
+            }
+            return output;
         }
     }
 }
