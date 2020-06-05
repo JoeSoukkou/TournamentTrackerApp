@@ -75,8 +75,6 @@ namespace TrackerUI
             WireUpLists();
         }
 
-       
-
         private void CreateNewTeamLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CreateTeamForm frm = new CreateTeamForm(this);
@@ -86,6 +84,29 @@ namespace TrackerUI
         {
             SelectedTeams.Add(model);
             WireUpLists();
+        }
+
+        private void RemoveSelectedPlayerButton_Click(object sender, EventArgs e)
+        {
+            
+            TeamModel Team = (TeamModel)TournamentTeamsListbox.SelectedItem;
+            if (Team != null)
+            {
+                SelectedTeams.Remove(Team);
+                AvailableTeams.Add(Team);
+                WireUpLists();
+            }
+        }
+
+        private void RemoveSelectedPrizeButton_Click(object sender, EventArgs e)
+        {
+            PrizeModel p = (PrizeModel)PrizesListbox.SelectedItem;
+            if (p != null)
+            {
+                SelectedPrizes.Remove(p);
+                
+                WireUpLists();
+            }
         }
     }
 }
